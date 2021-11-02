@@ -91,6 +91,15 @@
   - Weltumspannendes Netzwerk einer Firma.   
 
 
+## 1.1 Übertragungsarten
+
+### Duplex
+- Es ist eine Methode, wie Sie mit anderen kommunizieren können.
+- Gibt es drei Varianten:
+  - **Simplex** -> Datenübertragung nur in eine Richtung möglich. Beispiel: Radio oder TOSLINK.
+  - **Halb-Duplex** -> Abwechseld in beide Richtungen. *Nicht gleichzeitig*, sonst Kollisionen entstehen.
+  - **Voll-Duplex** -> In Beide Richtungen gleichzeitig übertragen. Bestes Verfahren für Geschwindigkeit. (Beispiel: Telefon).
+
 
 
 ---
