@@ -1,4 +1,8 @@
 # Netzwerkadministrator-in-werden
+
+
+# About
+
 ## Wie sind Netzwerke aufgebaut? Wie funktioniert die Datenübertragung? Was macht die IP-Adresse genau? Solche und viele weitere Fragen werden in diesem Training beantwortet. Dieses Training basiert auf den Grundlagen der Netzwerktechnik und zeigt anhand vieler Beispiele, wie Netzwerke aufgebaut sind und wie sie in der Praxis funktionieren.
 ---
 
