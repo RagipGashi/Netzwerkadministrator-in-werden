@@ -56,6 +56,43 @@
   ...
 
 
+### Netzwerkausdehnung
+
+- **BAN - Body Area Network**
+  - Direkt am Körper
+  - Medizinische Geräte, wie Pulsmesser, etc.
+  - Auch schnurlos: WBAN.
+  
+- **PAN - Personal Area Network**
+  - Headsets, Freisprecheinrichtung, etc. 
+  - Auch schnurlos: WPAN
+  - WPAN meist mit Bluetooth.
+  
+- **LAN - Local Area Network**
+  - Privates Netz zuhause
+  - Kleines Firmennetz
+  - Allgemein ein lokal begrenztes Netz, meistens in einem Gebäude
+  - Auch schnurlos: WLAN. 
+  
+- **CAN - City/Campus Area Network**
+  - Vernetzung mehrerer LANs einer Stadt/Uni
+  
+- **MAN - Metropoitan Area Network**
+  - z.B. Vernetzung von Telekommunikationsanbietern innerhalb einer Metropole
+  - Auch schnurlos: WMAN
+  
+- **WAN - Wide Area Network**
+  - Erstreckt sich über ein Land/Länder oder Kontinente
+  - Auch schnurlos: WWAN (sehr bekannte über LTE)
+  
+- **GAN - Global Area Network**
+  - Ein weltumspannendes Netzwerk
+  - Internet ist ein GAN
+  - Weltumspannendes Netzwerk einer Firma.   
+
+
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
