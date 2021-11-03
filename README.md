@@ -103,6 +103,32 @@
   - **Voll-Duplex** -> In Beide Richtungen gleichzeitig übertragen. Bestes Verfahren für Geschwindigkeit. (Beispiel: Telefon).
 
 
+## Verschiedene Übertragungsszenarien
+
+- In der Netzwerkkomunikation existieren unterschiedliche Übertragungsszenarien zur Verfügung.
+- Die beziehen sich darauf, wie Kommunikationskanäle zwischen Sender und Empfänger aufgebaut werden.
+
+- **Unicast** -> Eins zu Eins Verbindung: Ein Sender baut einen exklusiven Kommunikationskanal zu einem Empfänger auf.
+
+![Unicast](https://user-images.githubusercontent.com/44840806/140041789-5da0b8cc-0359-40d5-a9c1-124e9cf86e7b.png)
+
+
+- **Broacscast** -> Eins zu Alle Verbindung: Mit einem Sender alle Empfänger im Netzwerk zu erreichen.
+
+![Broadcast](https://user-images.githubusercontent.com/44840806/140042344-f2adce25-2747-46bf-924e-b148920bcc7a.png)
+
+
+- **Multicast** -> Eins zu Einige Verbindung: Mit einem Sender nicht alle Empfänger adressieren, sondern ein ganz bestimmten Host adressieren möchte, ein ganz bestimmten Empfänger. Die jenigen, die mitmachen wollen.
+
+![Multicast](https://user-images.githubusercontent.com/44840806/140043352-b490c5ef-abca-4c52-9578-0fd12e95dc13.png)
+
+
+- **Anycast** -> Ist ein Spezialfall einer Verbindung, eine Eins-zu-Nächstgelegenden Ziel Verbindung.
+  - Wir haben nich nur ein Zeil-IP sondern zwei Ziel-IPs die sind auch noch identisch. Das was bei **Unicasting** verboten ist, wiel IP Konflikt ist, das ist bei **Anycasting** Programm.
+
+![Anycast](https://user-images.githubusercontent.com/44840806/140050510-b7e0ee3f-855b-4d1c-b524-d5abf8c94df7.png)
+
+
 
 ---
 ## Resorces: 
