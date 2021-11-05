@@ -129,6 +129,68 @@
 ![Anycast](https://user-images.githubusercontent.com/44840806/140050510-b7e0ee3f-855b-4d1c-b524-d5abf8c94df7.png)
 
 
+## 1.2. Kommunikation visualisieren
+
+### Schichtenmodell
+- Um den gesamten Kummunikationsfluss zu visualisieren, benutzen wir ganz unterschiedliche Modelle - **Schichtenmodell**.
+
+- **Warum Schichtenmodelle?**
+  - Abstaktion der Kommunikation (vereinfahend der Kommunikation)
+  - Ablauf visualisieren
+  - Fachsprache (das macht leichter die Fehlersuche oder Fehlerbehebung).
+
+
+### Schchtenarchitekturen
+- OSI-Modell
+- DoD / TCP/IP-Modell
+- Betriebssystem-Modell
+
+
+## Das OSI-Modell
+
+### Der Aufbau des OSI-Modells
+
+1. **Bitübertragungsschicht / Physical Layer
+	- Reine Signalübertragung
+	- Elektrische Signale, Licht, Wellen
+	- Kabel, Stecker, Spannung
+	- Repeater, Hub
+
+
+2. **Sicherungsschicht / Data Link Layer**
+    - Zugriff auf das Medium
+    - Adressierung auf Hardwareebene (MAC-Adresse)
+	- Flusskontrolle
+	- Layer 2 Switch
+
+
+3. **Vermittlungsschicht / Network Layer**
+	- Logische Adressierung
+	- Wegewahl
+	- Router / Layer 3 Switch
+
+4. **Transportschicht / Transport Layer**
+	- Zugriff auf anwendungsorientierte Schichten
+	- Verbingungsorientierung
+	- Paketfilter
+
+5. **Sitzungsschicht / Saisson Layer**
+	- Aufbau, Aufrechterhaltung und Abbau von Sitzungen
+	- Remote Procedure Call (RPC)
+	![RPC-OSI-Modell](https://user-images.githubusercontent.com/44840806/140494981-1d0d9305-8342-409a-8c77-f8264cffad7f.png)
+
+6. **Darstellungsschicht / Presantation Layer**
+	- Unabhängige Darstellung von Daten (System unabhängige Datenübertragung. Von einem System zu anderen, die Daten ohne Informationsverlust übertragen werden können. z.B. eine System kann nur ANSII, das andere kann nur ASCII, in diesem Fall benötigen wir in der Mitte ein Format, das beide Kommunikationspartner lesen können).
+	- Abstract Syntax Notation One (ASN.1)
+	![ASN.1-OSI-Modell](https://user-images.githubusercontent.com/44840806/140496114-614d5587-0f83-49cf-81a8-0b5cf39d7991.png)
+
+7. **Anwendungsschicht / Application Layer**
+	- Anwendutsprotokolle (Hier handelt es sich um die Protokolle, die Anwendung selber liegt nicht in Schicht 7, sondern sie nutzt nur ein Protokoll auf Schicht 7, um mit einer andreren Anwendung zu kommunizieren).
+	![HTTPS-OSI-Modell](https://user-images.githubusercontent.com/44840806/140496671-9c8ba952-c3ab-4f5b-9070-644514f58979.png)
+
+
+
+
 
 ---
 ## Resorces: 
