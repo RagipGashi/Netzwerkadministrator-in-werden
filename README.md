@@ -177,16 +177,16 @@
 5. **Sitzungsschicht / Saisson Layer**
 	- Aufbau, Aufrechterhaltung und Abbau von Sitzungen
 	- Remote Procedure Call (RPC)
-	![RPC-OSI-Modell](https://user-images.githubusercontent.com/44840806/140494981-1d0d9305-8342-409a-8c77-f8264cffad7f.png)
+	- ![RPC-OSI-Modell](https://user-images.githubusercontent.com/44840806/140494981-1d0d9305-8342-409a-8c77-f8264cffad7f.png)
 
 6. **Darstellungsschicht / Presantation Layer**
 	- Unabhängige Darstellung von Daten (System unabhängige Datenübertragung. Von einem System zu anderen, die Daten ohne Informationsverlust übertragen werden können. z.B. eine System kann nur ANSII, das andere kann nur ASCII, in diesem Fall benötigen wir in der Mitte ein Format, das beide Kommunikationspartner lesen können).
 	- Abstract Syntax Notation One (ASN.1)
-	![ASN.1-OSI-Modell](https://user-images.githubusercontent.com/44840806/140496114-614d5587-0f83-49cf-81a8-0b5cf39d7991.png)
+	- ![ASN.1-OSI-Modell](https://user-images.githubusercontent.com/44840806/140496114-614d5587-0f83-49cf-81a8-0b5cf39d7991.png)
 
 7. **Anwendungsschicht / Application Layer**
 	- Anwendutsprotokolle (Hier handelt es sich um die Protokolle, die Anwendung selber liegt nicht in Schicht 7, sondern sie nutzt nur ein Protokoll auf Schicht 7, um mit einer andreren Anwendung zu kommunizieren).
-	![HTTPS-OSI-Modell](https://user-images.githubusercontent.com/44840806/140496671-9c8ba952-c3ab-4f5b-9070-644514f58979.png)
+	- ![HTTPS-OSI-Modell](https://user-images.githubusercontent.com/44840806/140496671-9c8ba952-c3ab-4f5b-9070-644514f58979.png)
 
 
 
