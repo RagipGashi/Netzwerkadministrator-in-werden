@@ -214,6 +214,60 @@
   ![Tertiäre Verkabelung](https://user-images.githubusercontent.com/44840806/140943008-e284f897-f519-400b-9cd0-782318d1c4a7.png)
 
 
+## Verschiedene Kabelarten
+
+### Kabel
+  - Verlegtekabel - werden zu festen Verkabelung zwischen den Patch-Panels genutz
+  - Patchkabel - den PC anzuschließen oder den Anschluß am Switch mit dem Patch-Panel zu patchen. 
+  
+
+### Twisted Pair
+  - CAT1-4:	kaum mehr anzutreffen, eher Telefon
+  - CAT5:	100MBit/s
+  - CAT5e:	100MBit/s - 1GB/s 
+  - CAT6:	1GB/s
+  - CAT7:	10GB/s 
+
+### Es gibt auch noch wietere Bezeichnungen für diese Kabel:
+  - UTP: 	Unshielded Twisted Pair - keine Abschirmung
+  - FTP:	Foiled TP - Adernpaar mit Alufolie geschirmt
+  - STP:	Shielded TP - Adenpaar mit Kupfergeflecht geschirmt
+  - S/UTP:	Screned UTP - Ader ungeschirmt, Kabel geschirmt
+  - S/STP:	Screned STP - Adernpaar geschirmt, Kabel geschirmt
+  
+### Kabelstecker:
+  - Bis CAT6: RJ45 (Western-/Ethernet-Stecker), 8P8C-Stecker
+  - CAT7: GG45-Stecker
+  - Reichweite 100m von aktivem zu aktivem Gerät
+  
+  ![Aktivem zu aktivem Gerät](https://user-images.githubusercontent.com/44840806/140952652-a2162cea-7179-461c-a36f-57dc417e9173.png)
+  
+  
+### LWL - Lichtwellenleiter (Glasfaser)
+  - Multi-Mode (Reichweite von circa 300 bis 500 Metern)
+  
+  ![Multi-Mode LWL](https://user-images.githubusercontent.com/44840806/140953369-c95cc8a6-bbeb-4895-9f16-30964500898b.png)
+
+  - Mono-Mode (Reichweite über mehreren Kilimetern)
+  
+  ![Mono-Mode LWL](https://user-images.githubusercontent.com/44840806/140953796-04a0d3eb-d2e5-4788-be09-e84290f8b38f.png)
+  
+ 
+### LWL Kabeltypen und Stecker
+  - OM1 und OM2: Standard für bis 1GBit/s
+  - OM3 und OM4: für höhere Geschwindigkeiten wie 10GBit/s 
+  
+  - **Stecker:**
+  - **LC-Stecker** den man meisten an dem Gerät, wie z.B. dem Server finden werden:
+  
+  ![LC-Stecker](https://user-images.githubusercontent.com/44840806/140954875-738d8e0e-b4c8-432f-bc36-7f05583e2c0d.png)
+  
+  - **SC-Stecker** den man am meisten an Patch-Panel findet.
+  
+  ![SC-Stecker](https://user-images.githubusercontent.com/44840806/140955196-6355545b-ff33-4624-a7ff-3621b972226a.png)
+
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
