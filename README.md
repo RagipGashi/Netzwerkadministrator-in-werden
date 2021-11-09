@@ -200,6 +200,20 @@
 ![Strukturierte Verkabelung-Primäre Verkabelung](https://user-images.githubusercontent.com/44840806/140767195-fe313172-7d54-4073-8baa-b00b8b847863.png)
 
 
+### Sekundäre Verkabelung
+  - Vertikale Verkabelung
+  - Nach DIN nur Glasfaser; in der Praxis auch Kupfer
+  
+  ![Sekundäre Verkabelung](https://user-images.githubusercontent.com/44840806/140942146-6084ffba-4ed3-4aa8-98b8-b091edeb7a0b.png)
+ 
+
+### Tertiäre Verkabelung
+  - Horizontale Verkabelung
+  - In der Regel Kupfer; in der Praxis manschmal auch Glasfaser
+  
+  ![Tertiäre Verkabelung](https://user-images.githubusercontent.com/44840806/140943008-e284f897-f519-400b-9cd0-782318d1c4a7.png)
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
