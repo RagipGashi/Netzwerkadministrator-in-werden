@@ -194,10 +194,10 @@
 ## Strukturierte Verkabelung
 
 ### Primäre Verkabelung
-	- Verkabelung zwischen Gebäuden/Hallen
-	- Glasfaser: weite Strecken und galvanische Trennung. (Es kann kein Austausch von Strom mehr erfolgen, somit ist auch kein Potentialasgleich über das Netzwerk möglisch).
+  - Verkabelung zwischen Gebäuden/Hallen
+  - Glasfaser: weite Strecken und galvanische Trennung. (Es kann kein Austausch von Strom mehr erfolgen, somit ist auch kein Potentialasgleich über das Netzwerk möglisch).
 	
-	![Strukturierte Verkabelung-Primäre Verkabelung](https://user-images.githubusercontent.com/44840806/140767195-fe313172-7d54-4073-8baa-b00b8b847863.png)
+![Strukturierte Verkabelung-Primäre Verkabelung](https://user-images.githubusercontent.com/44840806/140767195-fe313172-7d54-4073-8baa-b00b8b847863.png)
 
 
 ---
