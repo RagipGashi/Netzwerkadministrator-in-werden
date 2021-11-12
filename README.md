@@ -268,6 +268,86 @@
 
 
 
+## Drahtlose Übertragung
+
+  - Bluetoth (IEEE 802.15.1)
+  - WLAN (IEEE 802.11)
+  - Wi-Fi
+  - LTE
+
+
+### Bluetoth
+  - Reichweite in der Regel mehrere Meter
+  - Reichweite je nach Technik bis zu 100 Meter
+  - Nutzung hauptsächlich für Mobilgeräte
+
+### WLAN
+  - 2,4 GHz
+    - Weit verbreitet, Kanalüberlappung, Frequenz teilen mit Bluetoth, Mikrowellen, Babyphones, ...
+  - 5 GHz
+    - Klare Kanaltrennung, wenig Geräte (Es gibt täglich mehr Geräte, die 5 GHz unterstützen).
+
+### WLAN - 2,4 GHz
+  - 11 verfügbare Kanäle, in Europa bis 13, in Japan bis 14 Kanäle.
+  - 802.11	2MBit/s
+  - 802.11b	11MBit/s
+  - 802.11g	54Mbit/s
+  - 802.11n	~300Mbit/s
+
+  ![2.4GHz WLAN](https://user-images.githubusercontent.com/44840806/140958609-c4aab2ee-e1fe-4ada-959b-4e0bffa74070.png)
+
+
+### WLAN - 5 GHz
+  - Je nach Land bis zu 26 Kanäle
+  - 802.11a	54Mbit/s
+  - 802.11h	54-108MBit/s
+  - 802.11n	600MBit/s
+
+  ![5Ghz WLAN](https://user-images.githubusercontent.com/44840806/140959182-be8157bc-3ac0-46b8-b0e5-c71edb69e651.png)
+
+
+### WLAN - Reichweite
+  - Reichweite i.d.R. 30-100m auf freie Fläche, mit sep. antenne bis 300m.
+  - Besonderheit Richtfunk, bis zu mehreren Kilomenter
+  - Einschränkung hauptsächlich durch:
+    - Wasser (z.B. Nasse Außernwände an einem Haus oder das Badezimmer).
+	- Metall (z.B. besonders Stahlbeton oder Schnellbauwände schränken die Reichweite sehr stark ein).
+
+
+### WLAN - Verschlüsselung
+  - **WEP**
+    - Unsicher, veraltet
+  - **WPA**
+    - Basiert auf WEP, gitlt wieterstgehend als unsicher
+  - **WPA2**
+    - Heutiger Standard. Es arbeitet mit dem Verschlüsselungsmechanismus AES (Advanced Encryption Standar).
+	- Bis jetzt noch nicht geknackt. Trotzdem, empfohlen ist ein langes Passwort zu benutzen.
+  - Alternative, **VPN** über **WLAN** zu machen, mit z.B. IPSEC oder SSL.
+
+
+### Wi-Fi
+  - Oft synonym zu **WLAN** verwendet.
+  - Eigentlich nur ein Markenname.
+  - Geräte, die Standard der "Wi-Fi Alliance" entsprechen. **WLAN** ist die Technik, und **Wi-Fi** ein gewisser Standard.
+
+
+### LTE - Lont Term Evolution
+  - Bis zu 300 Mbit/s
+  - 4G-Standard erst ab LTE-Advanced
+  - 4G bis zu 1Gbit/s
+
+
+### Weitere
+  - WiMAX/WiMAX2 bis zu 1GBit/s
+  - HSPA+ bis zu 42MBit/s
+  - HSDPA bis zu 7MBit/s Down/ HSUPA bis zu 6MBit/s -> HSPA
+  - UMTS bis zu 384kBit/s
+  - EDGE bis zu 220kBit/s
+  - GPRS bis zu 53kBit/s
+
+
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
