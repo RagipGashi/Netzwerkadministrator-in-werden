@@ -347,6 +347,29 @@
 
 
 
+## Netzwerke mit einem Hub/Repeater verbinden
+
+- Die Unterschied zwischen einem Hub und einem Repeater:
+  - Ein **Repeater** hat in der Regel zwei Anschlüsse und wird genutzt, um eine Leitung zu verlängern. 
+  - Ein **Hub** hat mehrere Anschlüsse. 
+
+- **Details**
+  - Die arbeiten auf ISO7OSI Schicht 1
+  - **ALLE** Daten werden an **ALLE** Teilnehmer weitergeleitet
+  - Somit keine Begrenzung der Broadcastdomäne. (Beduetet, dass ein Broadcast-Packet, z.B. auf der Suche nach DHCP-Server, begrenzt wird. **HIER DEFINITIV NICHT**.
+  
+  
+### Hub/Repeater
+
+- Vorteile:
+  - Günstig
+  - Einfach
+  
+- Nachteile:
+  - Hoche Netzlast
+  - Mithören (sniffen) möglich. 
+
+
 
 ---
 ## Resorces: 
