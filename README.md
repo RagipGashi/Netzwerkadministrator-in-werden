@@ -382,10 +382,6 @@
 
 ## Ethernet-Frame
 
-### Aufbau
-
-![Ethernet Frame Aufbau](https://user-images.githubusercontent.com/44840806/144588692-529b1ac0-01e5-402b-8565-148fa4d06889.png)
-
 - Wenn wir in einem kabelgebundenen Netzwerk arbeiten, wir haben mit einem **Ethernet-System** zu tun. 
 - Ein **Ethernet-Frame** ist das letzt Paket, das gebildet wird, bevor es dann letzten Endes als reiner Bitdatenstrom aufs Kabel geht. 
 
@@ -403,7 +399,7 @@
 
 ### Die MAC-Adresse
 
-![image](https://user-images.githubusercontent.com/44840806/143896479-ebf56f17-8736-44d1-8589-a8fe10f0106c.png)
+![Mac-Adrese in CMD](https://user-images.githubusercontent.com/44840806/143896479-ebf56f17-8736-44d1-8589-a8fe10f0106c.png)
 
 - **MAC-Adresse** steht für **Media Access Control**, und das ist die Hardware-Adresse von einem Netzwerk-Interface.
 - Liegt auf der **Sicherungsschicht**.
