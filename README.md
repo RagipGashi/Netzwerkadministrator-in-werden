@@ -450,6 +450,75 @@
   - Wenn das Ethernet-Paket soweit fertig ist, dann kann's auch schon losgehen auf das Medium.
 
 
+### MAC-Adresse auffinden
+
+- Wir haben hier also das Address Resolution Protocol, mit Hilfe des ARP-Protokolls ordnen wir MAC-Adressen IP-Adressen zu.
+- Der Ablauf gliedert sich in zwei Teile: 
+  - dem **ARP-Request**, wo ich nach der MAC-Adresse frage, und 
+  - im besten Fall der **ARP-Reply** mit der korrekten MAC-Adresse das MAC-IP-Adress-Pärchen, wird dynamisch in einem lokalen Cache abgespeichert, und auch dynamisch wieder herausgelöscht,
+- **WICHTIG** So lange das Pärchen in diesem Cache drinsteht, muss kein neuer ARP-Request erfolgen.
+- Der Ping hätte nicht funktioniert, wenn nicht im Vorfeld das ARP-Protokoll gute Dienste und erfolgreiche Dienste geleistet hätte.
+
+
+### Netzwerke mit einem Switch/Bridge verbinden
+
+- Der Switch arbeitet auf **ISO/OSI Schicht 2** Model, und kann somit die MAC-Adresse auslesen. 
+- Mithilfe dieser MAC-Adresse erstellt sich der Switch eine Tabelle, an welchem Anschluss welche MAC-Adresse angeschlossen ist, und besitzt damit die Möglichkeit, die Daten nicht mehr an alle, sondern gezielt an einen Empfänger zu senden.
+- Er begrenzt keine Broadcast-Domäne, aber dafür die Kollisionsdomäne.
+
+
+### Switch-Sat
+
+- Source Address Table (SAT).
+  - Beinhaltet die MAC-Adresse und den dazugehörigen Anschluss. Versendet nun jemand ein Datenpaket, empfängt der Switch dieses und speichert sich die Absender-MAC-Adresse in der SAT zusammen mit dem Anschluss. 
+- Speichern der Absender-MAC beim Empfangen eines Pakets.
+- Broadcast-Adressen werden nicht gespeichert
+- Multicast-Adressen werden nicht gespeichert/ nur an Ziel-MAC's 
+
+
+### Switch-Modus
+
+- **Cat-through**
+  - Weiterleiten des Pakets nach dem Empfang der Ziel-Adresse.
+    - Sehr schnell, allerdings kann hier keine Fehlerüberprüfung mehr erfolgen und somit könnten defekte Pakete weitergeleitet werden.  
+- **Fragment-Free**
+  - Hier wird das Paket einfach auf einen konsistenten Paket-Header überprüft und erst dann weitergeleitet.  
+- **Store-and-Forward**
+  - Hier wird erst das komplette Datenpaket empfangen, die Prüfsumme kontrolliert und dann erst anhand der MAC-Adresse weitergeleitet. 
+    - Sehr sichere, aber auch sehr langsame Methode.
+  
+- **Adaptive**
+  - Beim moderneren, aber nicht von jedem Switch unterstützten Adaptive-Modus, wird als Standard "Cut-Through" verwendet. Und bei erkannten Fehlern heruntergeschaltet bis zum "Store-and-Forward-Modus".
+
+
+### Switch-STP (Spanning Tree Protocol)
+
+- Vermeiden von Schleifen
+  - Schleifen sind deshalb schlimm, weil z. B. ein Broadcast-Paket an alle gesendet wird. Passiert das auf allen Geräten in einer Schleife, wird man also zugemüllt mit diesem Broadcast-Paket und überlastet somit das Netzwerk.
+- Anschluss blockieren, prüfen, freigeben
+  - Nach einem gewissen Time-out wird der Anschluss freigegeben. Das kann natürlich teilweise zu Problemen führen. da dieser Zeitraum unter Umständen sehr lange dauert.
+- Portfast
+  - Es wird direkt der Anschluss freigeschaltet, und erst im Nachhinein überprüft, ob eine Schleife entstehen könnte.
+  - Diesen Modus sollte man aber nur an Anschlüssen verwenden, an denen definitiv nur ein Gerät angeschlossen wird.
+- RSTP(Rapid Spanning Tree Protocol), MSTP(Multiple Spanning Tree Protocol).
+  - Die entscheidende Verbesserungen bezüglich Geschwindigkeit und VLANs mit sich bringen.
+  
+### Switch-Stacking
+
+- Stackkabel
+  - Extra Switches benötigt, die dies explizit unterstützen. 
+  - Da es hierfür meist einen speziellen Anschluss und ein spezielles Stack-Kabel gibt, das die Daten- und Managementinformationen mit Highspeed überträgt.
+- Logische Einheit
+  - Dazu müssen die Switches in der Regel vom gleichen Hersteller und der gleichen Produktreihe kommen.
+- Performanter und besser verwaltbar als Uplink.
+  - Es ist wesentlich performanter und besser verwaltbar, als ein normaler Uplink zwischen zwei Switches.
+- Mal ganz davon abgesehen, dass der Uplink mir weitere Anschlüsse blockieren würde. 
+- Ein Stack ist also ideal, um die Anzahl der Anschlüsse zu erweitern und eine gewisse Auswahlsicherheit herzustellen. 
+
+
+
+
+
 
 ---
 ## Resorces: 
