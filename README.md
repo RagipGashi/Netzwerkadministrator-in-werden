@@ -367,7 +367,91 @@
   
 - Nachteile:
   - Hoche Netzlast
-  - Mithören (sniffen) möglich. 
+  - Mithören (sniffen) möglich.
+
+
+# 2. Daten strukturiert übertragen
+
+
+## Paketbildung / Framing
+
+- Eine Kommunikation durchläuft ihren Weg durch die Schichten, und bekommt diverse Steuerungsinformationen angefügt.
+- Die Steuerungsinformationen nennen wir **Header** und **Trailer**.
+- Die Desamtheit aus **Header** und **Trailer** ohne Nutzdaten, das nennt man **Overhead**.
+
+
+## Ethernet-Frame
+
+### Aufbau
+
+![Ethernet Frame Aufbau](https://user-images.githubusercontent.com/44840806/144588692-529b1ac0-01e5-402b-8565-148fa4d06889.png)
+
+- Wenn wir in einem kabelgebundenen Netzwerk arbeiten, wir haben mit einem **Ethernet-System** zu tun. 
+- Ein **Ethernet-Frame** ist das letzt Paket, das gebildet wird, bevor es dann letzten Endes als reiner Bitdatenstrom aufs Kabel geht. 
+
+
+## Aufbau:
+
+![Ethernet-Frame](https://user-images.githubusercontent.com/44840806/143895218-824b8370-d736-4a2b-ad4d-5cc34ba1fb9e.png)
+
+- Quell-MAC-Adresse, die MAC-Adresse, die Hardware-Adresse, mit der wir Systeme auf der Schicht 2, auf der Sicherungsschicht ansprechen können, 
+  - Das besteht auf zwei Teilen, einmal die Quell-MAC und einmal die Ziel-MAC, 
+- Danach ist ein Typenfeld, das beschreibt das nächsthöhere Protokoll,
+- Dann sind die Daten, beziehungsweise nicht die Nutzdaten, sondern die Daten, die hier eingefasst sind, da stecken auch schon die Header von den höheren Schichten mit drin, 
+- Zum Schluss ist eine Prüfsumme, der **Cyclic Redundancy Check**, mit der ein Empfänger prüfen kann, ob das Paket auch wirklich korrekt versendet wird.
+
+
+### Die MAC-Adresse
+
+![image](https://user-images.githubusercontent.com/44840806/143896479-ebf56f17-8736-44d1-8589-a8fe10f0106c.png)
+
+- **MAC-Adresse** steht für **Media Access Control**, und das ist die Hardware-Adresse von einem Netzwerk-Interface.
+- Liegt auf der **Sicherungsschicht**.
+- **MAC-Adresse** ist 6 Byte lang, also 48 Bit, und die wird direkt von den Hardware- oder Netzwerk-Interface-Herstellern vergeben.
+
+
+### Aufbau:
+
+![MAC-Aufbau](https://user-images.githubusercontent.com/44840806/143900094-1ccf050b-5c33-4952-8818-24c7e786cf29.png)
+
+- Die **MAC-Adresse** besteht auf zwei Teilen:
+  - **OUI (Organisationally Unique Identifier)** - 3 Byte -> Herstellernummer, die von **IEEE** an die einzelnen Hersteller vergeben wird.
+  - Die nächste 24 Bits, die können dann die Hersteller in ihrer Organistaion vergeben. 
+  -*Es gibt auch noch einen kleineren Adressblock für kleinere Organisationen und für Privatpersonen. Das ist der Individal Address Block, und der umfasst dann 4096 individuelle Adressen*.
+
+  
+### Das Typenfeld
+
+- Kennzeichnet das Protokoll der nächsthöheren Schicht
+- 0x0800 IP4
+- 0x0806 ARP
+- 0x0809b AppleTalk  
+
+
+### Das Datenfeld
+
+- Hier kan ein Ethernet-Paket insgesamt max **1518 Byte** lang sein.
+- **Header**, also **Quell-MAC** plus **Ziel-MAC** plus **Typenfeld** und die **CRC Prüfsumme** insgesamt 18 Bit wegfallen, beträgt die Nutzlast, die so ein Paket, ein Ethernet-Frame aufnehmen kann, **Max 1500 Byte**.
+- Die Nutzlast, wird als **MTU** oder **Maximum Transmission**
+
+
+### Maximum Transmission Unit
+
+![MTU](https://user-images.githubusercontent.com/44840806/144588993-c1373b54-aca5-436f-8bf0-9d33c9fcde00.png)
+
+- Wenn der Ethernet-Header erweitert wird, schrumpft dann diese MTU, weil er kann eben nicht mehr aufnehmen als diese 1518 Byte. 
+- Das passiert z.B. bei Point to Point over Ethernet (PPPoE).
+
+
+### Padding Feld 
+
+![Padding Feld](https://user-images.githubusercontent.com/44840806/144605303-db8e1804-88df-43ba-ba0b-8541db82947b.png)
+
+- Wenn wir jetzt diesen Ethernet-Frame betrachten, und wir haben in dem Beispiel hier eine reine Datenmenge von 10 Byte, dann können wir das ja jetzt mal zusammenrechnen: 
+  - Also, die Quell-MAC hat 6 Byte, plus TMAC nochmal 6 Byte, und das Typenfeld plus die 10 Byte Daten, da sind wir dann bei 24 Byte, plus die Prüfsumme, da sind wir dann bei 28 Byte, 
+  - Jetzt haben wir das Problem, 28 Byte, die reichen nicht aus, die sind zu groß für einen Ethernet-Frame, und deswegen gibt es ein sogenanntes **Padding-Feld**.
+  - Dieses Padding-Feld, damit werden dann die Ethernet-Frames einfach so lange aufgefüllt, bis mindestens 64 Byte erreicht sind, und somit hat dann der Ethernet-Frame auch seine Minimalgröße. 
+  - Wenn das Ethernet-Paket soweit fertig ist, dann kann's auch schon losgehen auf das Medium.
 
 
 
