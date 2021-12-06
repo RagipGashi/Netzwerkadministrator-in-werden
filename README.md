@@ -370,7 +370,7 @@
   - Mithören (sniffen) möglich.
 
 
-# 2. Daten strukturiert übertragen
+# 3. Daten strukturiert übertragen
 
 
 ## Paketbildung / Framing
