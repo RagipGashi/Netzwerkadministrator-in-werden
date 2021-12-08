@@ -564,6 +564,25 @@
 
 
 
+## Token Passing: Ablauf
+
+- Ein Freitoken kreist im Netz:
+
+![Token-Frei](https://user-images.githubusercontent.com/44840806/145174614-c2772445-d15f-42e0-b6a6-69ad08f8e97c.png)
+
+- Sendewillige Station hängt Daten an:
+
+![Token-Belegt](https://user-images.githubusercontent.com/44840806/145174865-e7f728ea-808d-4c24-a195-6f3d72b7b618.png)
+
+- Empfangsstation kopiert die Daten:
+
+![Token-Empfangen](https://user-images.githubusercontent.com/44840806/145175075-d4b24d4b-b289-471f-9392-5fb8263d0b32.png)
+
+- Sendestation wandelt den Token wieder um:
+
+![Token-Wieder Frei](https://user-images.githubusercontent.com/44840806/145175167-ad99f4e6-e05c-4e5c-a76f-07710920979f.png)
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
