@@ -525,7 +525,7 @@
 - **C**arrier **S**ense: Abhören der Leitung
   1. Zunächst hört ein senderwilliger Client die Leitung ab.
   2. Falls die Leitung frei ist, darf er senden.
-  3.Wenn nicht, dann muss er sich zurückhalten, und wartet eine bestimmte Zeit ab, bis er es wieder probiert. Im besten Fall, bekommt er dann sein Datenpaket abgesetzt, und die Übertragung war erfolgreich.
+  3. Wenn nicht, dann muss er sich zurückhalten, und wartet eine bestimmte Zeit ab, bis er es wieder probiert. Im besten Fall, bekommt er dann sein Datenpaket abgesetzt, und die Übertragung war erfolgreich.
 - **M**ulticast **A**ccess: potenziell gleichteitiger Zugriffsverfahren.
   - Multiple Access, das heißt, während der eine Client sendet, oder der eine Client gerade ein leeres Medium entdeckt und anfängt zu senden, dann kann es natürlich einem anderen Client ganz genauso gehen.
   - Beide können gleichzeitig auf das Medium zugreifen. In diesem Fall muss es einen Mechanismus geben, der die Kollision, die dann eben auftritt, erkennt(Collision Detection).
