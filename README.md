@@ -583,6 +583,29 @@
 ![Token-Wieder Frei](https://user-images.githubusercontent.com/44840806/145175167-ad99f4e6-e05c-4e5c-a76f-07710920979f.png)
 
 
+
+# 4. Vergabe der IP-Adressen
+
+
+## Layer-3-Switch
+
+- Switch, der auf Schicht 3 arbeitet, also der Schicht des Routers.
+- Wird benötigt, um verschiedene IP-Netzwerke zu verbinden.
+- Laut ISO/OSI kennt er max. die IP.Adressse.
+- In der Praxis auch TCP/UDP-Ports der höheren Schichten.
+
+### Layer-3-Switch oder Router?
+
+| L3 Switch   | Router |
+| ----------- | ----------- |
+| Schneller | Mehr Funktionen |
+| Günstiger | Weniger Ports |
+| Eher Backbone | Eher Standortverbindungen |
+
+- Somit gehört der Layer 3 Switch i.d.R. eher in das Backbone-Netz, um die verschiedenen VLANS und Netze performant zu verbinden. 
+- Den Router würde eher benutzen, um Standorte zu verbinden oder für den Weg ins Internet.
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
