@@ -606,6 +606,32 @@
 - Den Router würde eher benutzen, um Standorte zu verbinden oder für den Weg ins Internet.
 
 
+## VLAN
+
+### Netzwerk
+
+- Alle Clients in einem Netzwerk.
+- Hohe Broadcast.
+- Keine Beschränkungen.
+
+
+### VLAN
+ 
+- Ein physisches Netzwerk in viele logische Netzwerke auftrennen.
+- Jedes Netzwerk kann beschränkt sein. (z.B. nicht jeder kann Zugriff auf Geschäfts VLAN haben).
+- Verkleinern der Broadcastdomäne.
+
+- TAG
+- Port am Switch
+- TCP/UDP-Port
+- MAC-Adresse 
+- IP-Adresse
+
+
+![VLAN-Konzept](https://user-images.githubusercontent.com/44840806/145230950-aba54926-976c-403b-aa75-92ccb8c1000f.png)
+
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
