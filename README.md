@@ -517,6 +517,50 @@
 
 
 
+# 3.1. Zugriffsverfahren auf das Medium
+
+
+## CSMA/CD: Definition
+
+- **C**arrier **S**ense: Abhören der Leitung
+  1. Zunächst hört ein senderwilliger Client die Leitung ab.
+  2. Falls die Leitung frei ist, darf er senden.
+  3.Wenn nicht, dann muss er sich zurückhalten, und wartet eine bestimmte Zeit ab, bis er es wieder probiert. Im besten Fall, bekommt er dann sein Datenpaket abgesetzt, und die Übertragung war erfolgreich.
+- **M**ulticast **A**ccess: potenziell gleichteitiger Zugriffsverfahren.
+  - Multiple Access, das heißt, während der eine Client sendet, oder der eine Client gerade ein leeres Medium entdeckt und anfängt zu senden, dann kann es natürlich einem anderen Client ganz genauso gehen.
+  - Beide können gleichzeitig auf das Medium zugreifen. In diesem Fall muss es einen Mechanismus geben, der die Kollision, die dann eben auftritt, erkennt(Collision Detection).
+- **C**ollision **D**detection: Erkennen einer Überlagerung.
+  - Erkennen einer Kollision, beziehungsweise das Erkennen einer Überlagerung auf dem Strang.
+
+- **Backoff Time** - Zeit nach der Kollision. Alle PCs warten einige Zeit nach der Kollision, bevor sie nochmal mit dem Datenübertragung anfangen.
+
+
+## CSMA/CA: Definition.
+- Im Vergleich zu CSMA/CD geht es bei CSMA/CA nicht um die Kollisionserkennung, sondern um die Kollisionsvermeidung.
+
+- CS: **C**arrier **S**ense.
+  - Eine sendewillige Station muss zunächst am Medium lauschen, wenn das Medium frei ist, dann darf sie senden, wenn das Medium belegt ist, muss die Station warten, und es dann später noch einmal probieren.
+- MA: **M**ultiple **A**ccess.
+  - Auch beim CSMA/CA können Kollisionen nicht vollständig vermieden werden, man kann die Wahrscheinlichkeit nur minimieren, deswegen ist prinzipiell auch bei CSMA/CA ein Multiple Access, also ein gleichzeitiger Zugriff, möglich.
+- CA: **C**ollision **A**voidance.
+  -  Zunächst hört die Station das Medium, also inm Fall vom WLAN, die Luft, ab, und das Medium muss für den Zeitraum eines **DIFS** zunächst frei sein, dann interpretiert der Sender das als frei.
+    - DIFS (Distributed Coordination Function Interframe Spacing). Entspricht praktisch der Zeitspanne, der vordefinierten Zeitspanne, die der Sender warten muss.
+  1. Dann kommt nochmal eine Zeit obendrauf, eine Zufallszeit, das ist die Backoff-Zeit, und nach diesem Gesamtzeitraum darf die Station dann senden.
+  2. Sollte das Medium belegt sein - die Station zunächst warten, bevor sie einen neuen Versuch startet, und zwar gibt es auch hier wieder diverse Zeiträume, die gewartet werden muss, da haben wir zunächst den Network Allocation Vector.
+    - Network Allocation Vector - eine Tabelle, pflegt jeder Client für sich selbst - in MAC-Layer Frame von einem Wireless-Packet gibt einen kleinen Abschnitt (Duration).
+	- In Duration steht drin, wie lange ich jetzt ungefähr das Medium beanspruche.
+	- Andere Clients mitbekommen, die pflegen also aus dieser Information ihren eigenen NAV. Die warten dann bis das Medium frei ist.
+  - Dan haben wir:
+    - Backoff-Time -> DIFS (nochmal Zufallszeitraum)-> dann kann ich nochmal versuchen, das Medium abzuhören.
+	- Das Medium ist jeztz frei, und wir können unsere Daten los senden.
+  - Was passiert jetzt?
+    - Daten werden direkt in einem Rutsch zum Empfänger geschickt.
+	- Empfänger wartet den Zeitraum eines SIFS (Short Interframe Spacing),
+	- Nachdem SIFS, Empfänger schickt ein Acknowladge-Paket zurück. (Der Sender weißt jetzt, dass ein Paket im Vorfeld angekommen ist).
+  - Ein zusätzlicher Sicherheitsmechanismus in CSMA/CA ist folgender:
+    - Ein Sender beziehungsweise der Empfänger nutzen die Ready-to-Send beziehungsweise Clear-to-Send Möglichkeiten.
+	- Der Empfänger im Vorfeld bekommt ein Ready-to-Send -> er schickt ein Clear-to-Send zurück wenn das Medim frei ist.
+	- **Dieses Ready-to-Send und Clear-to-Send System bekommen natürlich auch alle anderen Stationen in der Umgebung mit, ja, und die wissen dann eben, dass sie jetzt in diesem Zeitraum nicht mehr versuchen müssen zu senden.**
 
 
 
