@@ -632,6 +632,26 @@
 
 
 
+# 4.1. IPv4-Adressen definieren
+
+
+## Dezimale in binäre Zahlen konvertieren
+
+### Basis 10 - Dezimalzahlen
+
+![Dezimale Zahlen](https://user-images.githubusercontent.com/44840806/145231893-bc90ee0f-3549-4f6d-8400-20b89d0b65b9.png)
+
+
+### Basis 2 - Dual nach Dezimale
+
+![Binäre Zahlen](https://user-images.githubusercontent.com/44840806/145232663-3e1e471d-cee6-413b-86a7-57fbafa5ef9f.png)
+
+
+### Basis 10 - Dezimal nach Binär
+
+![Dezimal zu Binär umwandeln](https://user-images.githubusercontent.com/44840806/145235098-68df20c5-2ece-429f-81e9-aa0070723f2f.png)
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
