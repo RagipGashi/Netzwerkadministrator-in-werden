@@ -652,7 +652,7 @@
 ![Dezimal zu Binär umwandeln](https://user-images.githubusercontent.com/44840806/145235098-68df20c5-2ece-429f-81e9-aa0070723f2f.png)
 
 
-## Die IPv4-Adresse
+## Aufbau einer IPv4-Adresse
 
 - z.B. 192.168.100.2 ist eine IPv4-Adresse
 - Der Computer sieht diese Zanl als Binärzahl.
