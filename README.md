@@ -652,6 +652,23 @@
 ![Dezimal zu Binär umwandeln](https://user-images.githubusercontent.com/44840806/145235098-68df20c5-2ece-429f-81e9-aa0070723f2f.png)
 
 
+## Die IPv4-Adresse
+
+- z.B. 192.168.100.2 ist eine IPv4-Adresse
+- Der Computer sieht diese Zanl als Binärzahl.
+- Diese Zahlt hat insgesamt 32-Bit Länge. 2 ^ 32 = rund 4 Milliarden IP-Adressen. Damals ausgereicht, heute aber nicht mehr. 
+
+![IPv4](https://user-images.githubusercontent.com/44840806/145380180-4a704e50-1839-48ab-bce0-39da739d4d85.png)
+
+
+#### **Spezialfälle**
+
+- Alle Bits auf 0 = reservierte Adresse
+- Alle Bits auf 1 = globaler Broadcast
+- Alle Bits im Hostanteil auf 0 = Netzwerkadresse
+- Alle Bits im Hostanteil  auf 1 = Broadcast des Netzwerk 
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
