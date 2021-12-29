@@ -669,6 +669,107 @@
 - Alle Bits im Hostanteil  auf 1 = Broadcast des Netzwerk 
 
 
+## Subnetzmaske
+
+- Die Subnetzmaske spielt in der Netzwerkkonfiguration eine wichtige Rolle.
+- Trennt Netzwerk von Hostanteil
+- Legt fest, ob ein Zielhost lokal oder remote liegt:
+  - Lokal = lokales Interface   
+  - Remote = Router adressieren
+
+- **Notationsformen**
+
+|Clasisch | Heute/modern CIDR |
+| --- | --- |
+| 192.168.100.0 <br/>  255.255.255.0 | 192.168.100.0/24 |
+
+
+### Subnetzmaske in Aktion
+- Quelle: 192.168.0.1/24
+- Ziel: 192.168.100.14
+
+- **So funktioniert es:*
+- IP nimmt die Quell-IP und die Quellsubnetzmaske her, und undiert diese beiden mit einem logischen UND, kriegt dann als Ergebnis "1". 
+- Dann nimmt man die Ziel-IP und die Quellsubnetzmaske und kriegt ein Ergebnis "2" . 
+- So, jetzt vergleicht man die beiden Ergebnisse.
+- Wenn die beiden Ergebnisse identisch sind, muss das Ziel hier in meinem Netzwerk liegen, sind die beiden Ergebnisse ungleich, liegt das Ziel woanders und ich muss über den Router gehen.
+- *IPs müssen Binär konvertiert sein*
+
+
+## Die Geschichte der Netzwerkklassen
+
+- **Netzwerkanteil und Hostanteil**
+  - Netzwerkanteilkennzeichnet ein bestimmtes Netz.
+  - Hostanteil bestimmt zusammenhängenden IP-Bereich.
+    - **nnnnnnnn.nnnnnnnn.nnnnnnnn.hhhhhhhh**
+	
+### Geschichte
+
+- Einleitung in Klassen
+- Klasse A: 8 Bit Netzwerkanteil, 24 Bit Hostanteil.
+- Klasse B: 16 Bit Netzwerkanteil, 16 Bit Hostanteil.
+- Klasse C: 24 Bit Netzwerkanteil, 8 Bit Hostanteil.
+- Klasse D + E: Reserviert
+
+
+### Most Significant Bits (MSB)
+
+- Unterteilung der Klassen nach den MSB
+  - MSB 0 -> 8 Bit NW & 24 Bit Hostanteil, Klasse Adressen
+  - MSB 10 -> 16 Bit NW & 16 Bit Hostanteil, Klasse B
+  - MSB 110 -> 8 Bit NW & 24 Bit Hostanteil, Klasse C
+  - MSB 1110 -> Multicasting, Klasse D
+  - MSB 11110 -> Reserviert, Klasse E. 
+  
+  
+### Netzwerkklassen bestimmen
+
+- MSB wird nicht geändert!
+- Kleinster möglicher Bereich
+- Größter möglicher Bereich.
+
+- Klasse A MSB= **0**
+
+  - Kleinste Variante - Binär: **0**0000000.00000000.00000000.00000000
+  - Größte Variante - Binär: **0**1111111.11111111.11111111.11111111
+  
+  - Kleinste Variante - Dezimal: 0.0.0.0
+  - Größte Variante - Dezimal: 127.255.255.255
+  
+- Klasse B MSB = **10**
+
+  - Kleinste Variante - Binär: **10**0000000.00000000.00000000.00000000
+  - Größte Variante - Binär: **10**111111.11111111.11111111.11111111
+  
+  - Kleinste Variante - Dezimal: 128.0.0.0
+  - Größte Variante - Dezimal: 191.255.255.255
+  
+- Klasse C MSB= **110**
+
+  - Kleinste Variante - Binär: **110**00000.00000000.00000000.00000000
+  - Größte Variante - Binär: **110**11111.11111111.11111111.11111111
+  
+  - Kleinste Variante - Dezimal: 192.0.0.0
+  - Größte Variante - Dezimal: 223.255.255.255
+  
+
+### Die Subnetzmaske
+
+![Subnetzmaske](https://user-images.githubusercontent.com/44840806/147678842-a2878236-d968-4fda-8dbc-fbd15efa40af.png)
+
+- Flexible Bestimmung von Netzwerk- und Hostanteil.
+- **1** bedeutet Netzwerkanteil.
+- **0** bedeutet Hostanteil.
+
+
+### CIDR- die einfache Notation
+
+- Netzwerkanteil wird nach einem Schrägstrich angegeben
+  - 192.168.100.0/**24**
+  - **24** Bit Netzwerkanteil.
+  
+  - **11111111.11111111.11111111.00000000
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
