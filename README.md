@@ -688,7 +688,7 @@
 - Quelle: 192.168.0.1/24
 - Ziel: 192.168.100.14
 
-- **So funktioniert es:*
+- **So funktioniert es:**
 - IP nimmt die Quell-IP und die Quellsubnetzmaske her, und undiert diese beiden mit einem logischen UND, kriegt dann als Ergebnis "1". 
 - Dann nimmt man die Ziel-IP und die Quellsubnetzmaske und kriegt ein Ergebnis "2" . 
 - So, jetzt vergleicht man die beiden Ergebnisse.
@@ -768,7 +768,7 @@
   - 192.168.100.0/**24**
   - **24** Bit Netzwerkanteil.
   
-  - **11111111.11111111.11111111.00000000
+  - **11111111.11111111.11111111**.00000000
 
 ---
 ## Resorces: 
