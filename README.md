@@ -770,6 +770,57 @@
   
   - **11111111.11111111.11111111**.00000000
 
+
+## Subnetze bilden - Subnetting Basics
+
+- Subnetting = Verschieben des Netzwerkanteils
+- Mehr Netze ergibt weniger Hosts
+  - Vor Subnetting: **nnnnnnnn.nnnnnnnn.nnnnnnnn.hhhhhhhh**
+  - Nach Subnetting: **nnnnnnnn.nnnnnnnn.nnnnnnnn.nnnhhhhhh**
+- Deb Netzwerkanteil fassen wir nicht an!
+  
+![Subnetting](https://user-images.githubusercontent.com/44840806/147733244-d889822f-04df-4c84-9c4d-cfc75579cb67.png)
+
+- Plausibilität: Wie viele Netze benötige ich?
+- Plausibilität: Wie viele Hosts je Netz?
+
+![Possible IPs in Subnetting](https://user-images.githubusercontent.com/44840806/147733486-ca187553-9df2-4beb-9a91-07582fea7a63.png)
+
+
+### Subnetting Vorbereitung
+
+- Anzahl der Subnetbits: 2<sup>n.
+- Anzahl der Hostbits: 2<sup>n</sup> - 2
+- Nur Potenzen von 2 möglich
+
+- ***Beispiel:***
+  - 20 Newerke gesucht
+  - 2<sup>4</sup> = 16 -> reicht nicht aus &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2<sup>5</sup> = 32 -> reicht aus. 
+
+
+### Subnetbits Umsetzung
+
+- Subnetbits in die Maske einsetzen / umwandeln
+
+  - Alte Maske<sub>2</sub>: 11111111.11111111.11111111.00000000
+  - Neue Maske<sub>2</sub>: 11111111.11111111.11111111.**11111**000
+  
+  - Alte Maske<sub>10</sub>: 255.255.255.0
+  - Neue Maske<sub>10</sub>: 255.255.255.248
+
+- Schrittweite bestimmen
+
+![Subnetting](https://user-images.githubusercontent.com/44840806/147756112-79d06c74-edf9-4300-9e6e-dad63c8ac9ea.png)
+
+| | | |
+|---|---|---|
+| Netz-ID | 192.168.100.0 | <- Schrittweite je neues Netz: 8 |
+| 1. IP | 192.168.100.1 |   
+| Letzte IP | 192.168.100.6 |
+| Netz-Broadcast | 192.168.100.7 |   
+
+
+
 ---
 ## Resorces: 
 [Linkedin Learning: Netzwerkadministrator:in werden](https://www.linkedin.com/learning/netzwerkgrundlagen/willkommen-zu-netzwerkgrundlagen?autoAdvance=true&autoSkip=false&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5996a3e6498e41bff67b4a79&resume=false)
